@@ -1,0 +1,19 @@
+[33m7333620[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmy-rebase-practice[m[33m, [m[1;31morigin/exercise/01-rebase-practice[m[33m, [m[1;32mexercise/01-rebase-practice[m[33m)[m docs: update Go prerequisite to 1.24+
+[33m3c72ddf[m chore: set go.mod to go 1.24 for golangci-lint compatibility
+[33mcb3b318[m docs: update Go prerequisite to 1.25+ in README
+[33md7ad4d3[m chore: set go.mod to go 1.25 for matrix build compatibility
+[33m55ded5b[m docs: update Go version references in README (1.22->1.26)
+[33mae2285a[m chore: update Go version to 1.26.1
+[33m8f1bd93[m docs: update author information in README
+[33mdc41830[m docs: add fork instructions, remove solution branch references from README
+[33m20eaf19[m docs: add contribution guidelines
+[33mf77c670[m fix readme: add student placeholder
+[33md65f490[m docs: update changelog with latest commmit changes
+[33mb55ce7c[m docs: add API documentation
+[33m9f14bc0[m fix readme: update author name
+[33m7917a64[m feat: add example configuration
+[33m29ae7f8[m fix readme: add authors section
+[33m0113586[m chore: add debug output for testing
+[33m6bde766[m docs: add changelog
+[33m2a4e57f[m feat: add initial features document
+[33mb8f7604[m feat: initial Go project structure for Product Catalog API
