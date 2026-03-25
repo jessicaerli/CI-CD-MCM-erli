@@ -51,3 +51,4 @@ Each exercise branch contains a detailed `README.md` with instructions.
 
 ## Authors
 - Prof. M. Kurz
+- Student Name
