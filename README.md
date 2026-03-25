@@ -48,3 +48,6 @@ git checkout exercise/01-git-basics
 ```
 
 Each exercise branch contains a detailed `README.md` with instructions.
+
+## Authors
+- Course Instructor
