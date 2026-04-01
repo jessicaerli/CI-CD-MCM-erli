@@ -15,6 +15,7 @@ This repository contains four progressive exercises for the Master course **Cont
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **Language:** Go 1.22+
 =======
 - **Language:** Go 1.24+
@@ -22,6 +23,9 @@ This repository contains four progressive exercises for the Master course **Cont
 =======
 - **Language:** Go 1.26+
 >>>>>>> 55ded5b (docs: update Go version references in README (1.22->1.26))
+=======
+- **Language:** Go 1.25+
+>>>>>>> cb3b318 (docs: update Go prerequisite to 1.25+ in README)
 - **Web Framework:** Gorilla Mux
 - **Database:** PostgreSQL
 - **Containerization:** Docker & Docker Compose
@@ -38,6 +42,7 @@ Throughout the exercises, you will build and evolve a RESTful Product Catalog AP
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Go 1.22+ installed
 =======
 - Go 1.24+ installed
@@ -45,6 +50,9 @@ Throughout the exercises, you will build and evolve a RESTful Product Catalog AP
 =======
 - Go 1.26+ installed
 >>>>>>> 55ded5b (docs: update Go version references in README (1.22->1.26))
+=======
+- Go 1.25+ installed
+>>>>>>> cb3b318 (docs: update Go prerequisite to 1.25+ in README)
 - Git 2.30+
 - GitHub Account
 - Docker Desktop (from Exercise 2)
