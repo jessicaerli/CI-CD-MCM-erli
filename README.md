@@ -12,7 +12,7 @@
 
 ## Prerequisites
 
-- Go 1.22+ installed
+- Go 1.26+ installed
 - Git 2.30+
 - GitHub account with access to this repository
 
