@@ -13,7 +13,11 @@ This repository contains four progressive exercises for the Master course **Cont
 
 ## Technology Stack
 
+<<<<<<< HEAD
 - **Language:** Go 1.22+
+=======
+- **Language:** Go 1.24+
+>>>>>>> 7333620 (docs: update Go prerequisite to 1.24+)
 - **Web Framework:** Gorilla Mux
 - **Database:** PostgreSQL
 - **Containerization:** Docker & Docker Compose
@@ -28,7 +32,11 @@ Throughout the exercises, you will build and evolve a RESTful Product Catalog AP
 
 ## Prerequisites
 
+<<<<<<< HEAD
 - Go 1.22+ installed
+=======
+- Go 1.24+ installed
+>>>>>>> 7333620 (docs: update Go prerequisite to 1.24+)
 - Git 2.30+
 - GitHub Account
 - Docker Desktop (from Exercise 2)
