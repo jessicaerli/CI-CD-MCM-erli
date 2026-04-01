@@ -149,3 +149,7 @@ All tests must use `httptest.NewRecorder` (no actual HTTP server needed).
 | Docker & Docker Compose | 8 |
 | Handler Tests | 8 |
 | **Total** | **24** |
+
+## Author
+- FH-Prof. Dr. Marc Kurz (marc.kurz@fh-hagenberg.at)
+
