@@ -62,20 +62,10 @@ jobs:
         with:
           name: coverage-ubuntu-latest-1.26
 
-      - name: Check SonarCloud token
+      - name: Test SonarCloud project access
         run: |
-          if [ -z "${SONAR_TOKEN}" ]; then
-            echo "SONAR_TOKEN is NOT set"
-            exit 1
-          else
-            echo "SONAR_TOKEN is set"
-          fi
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-      - name: Test SonarCloud authentication
-        run: |
-          curl -s -u "${SONAR_TOKEN}:" https://sonarcloud.io/api/authentication/validate
+          curl -s -u "${SONAR_TOKEN}:" \
+            "https://sonarcloud.io/api/settings/values?component=jessicaerli_CI-CD-MCM-erli"
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
