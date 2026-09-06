@@ -62,13 +62,6 @@ jobs:
         with:
           name: coverage-ubuntu-latest-1.26
 
-      - name: Test SonarCloud project access
-        run: |
-          curl -s -u "${SONAR_TOKEN}:" \
-            "https://sonarcloud.io/api/settings/values?component=jessicaerli_CI-CD-MCM-erli"
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
