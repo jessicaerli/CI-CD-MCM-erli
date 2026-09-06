@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: go build -o api-server ./cmd/api
 
-  # TODO: Add docker-build job that builds and tags the Docker image
+
   docker-build:
     needs: test
     runs-on: ubuntu-latest
