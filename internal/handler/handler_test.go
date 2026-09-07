@@ -77,4 +77,98 @@ func TestGetProductNotFound(t *testing.T) {
 	}
 }
 
-// TODO: Add tests for UpdateProduct, DeleteProduct, and invalid payloads
+func TestUpdateProduct(t *testing.T) {
+	r, _ := setupRouter()
+
+	createReq := httptest.NewRequest(
+		"POST",
+		"/products",
+		strings.NewReader(`{"name":"Ube Jam","price":5.99}`),
+	)
+	createRR := httptest.NewRecorder()
+
+	r.ServeHTTP(createRR, createReq)
+
+	req := httptest.NewRequest(
+		"PUT",
+		"/products/1",
+		strings.NewReader(`{"name":"Ube Jam new","price":6.25}`),
+	)
+	rr := httptest.NewRecorder()
+
+	r.ServeHTTP(rr, req)
+
+	if rr.Code != http.StatusOK {
+		t.Errorf("expected 200, got %d", rr.Code)
+	}
+}
+
+func TestDeleteProduct(t *testing.T) {
+	r, _ := setupRouter()
+
+	createReq := httptest.NewRequest(
+		"POST",
+		"/products",
+		strings.NewReader(`{"name":"Ube Jam","price":5.99}`),
+	)
+	createRR := httptest.NewRecorder()
+
+	r.ServeHTTP(createRR, createReq)
+
+	req := httptest.NewRequest("DELETE", "/products/1", nil)
+	rr := httptest.NewRecorder()
+
+	r.ServeHTTP(rr, req)
+
+	if rr.Code != http.StatusOK {
+		t.Errorf("expected 200, got %d", rr.Code)
+	}
+}
+
+func TestCreateInvalidProduct(t *testing.T) {
+	r, _ := setupRouter()
+
+	createReq := httptest.NewRequest(
+		"POST",
+		"/products",
+		strings.NewReader(`{"name":"Ube Jam","price":`),
+	)
+	createRR := httptest.NewRecorder()
+
+	r.ServeHTTP(createRR, createReq)
+
+	if createRR.Code != http.StatusBadRequest {
+		t.Errorf("expected 400, got %d", createRR.Code)
+	}
+}
+
+func TestCreateProductNegativePrice(t *testing.T) {
+	r, _ := setupRouter()
+
+	body := `{"name":"Tofu","price":-2.99}`
+
+	req := httptest.NewRequest("POST", "/products", strings.NewReader(body))
+	rr := httptest.NewRecorder()
+
+	r.ServeHTTP(rr, req)
+
+	if rr.Code != http.StatusBadRequest {
+		t.Errorf("expected 400, got %d", rr.Code)
+	}
+}
+
+func TestDeleteProductNotFound(t *testing.T) {
+	r, _ := setupRouter()
+
+	createReq := httptest.NewRequest(
+		"DELETE",
+		"/products/999",
+		nil)
+	createRR := httptest.NewRecorder()
+
+	r.ServeHTTP(createRR, createReq)
+
+	if createRR.Code != http.StatusNotFound {
+		t.Errorf("expected 404, got %d", createRR.Code)
+	}
+}
