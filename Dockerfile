@@ -10,13 +10,24 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -o /api-server ./cmd/api
 
 # Runtime stage
-FROM alpine:3.19
+#FROM alpine:3.19
 
-RUN apk --no-cache add ca-certificates
+# RUN apk --no-cache add ca-certificates
 
-WORKDIR /app
-COPY --from=builder /api-server .
+# WORKDIR /app
+# COPY --from=builder /api-server .
+
+# EXPOSE 8080
+
+# ENTRYPOINT ["./api-server"]
+
+
+
+# Runtime stage
+FROM gcr.io/distroless/static-debian12:nonroot
+
+COPY --from=builder /api-server /api-server
 
 EXPOSE 8080
 
-ENTRYPOINT ["./api-server"]
+ENTRYPOINT ["/api-server"]
