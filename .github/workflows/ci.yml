@@ -143,6 +143,3 @@ jobs:
 
   # TODO: Add vulnerability-scan job using govulncheck
   # Hint: Install with "go install golang.org/x/vuln/cmd/govulncheck@latest"
-
-  # TODO: Add trivy-scan job for Docker image vulnerability scanning
-  # Hint: Use aquasecurity/trivy-action@master after the docker-build job
